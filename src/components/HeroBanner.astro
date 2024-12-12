@@ -1,0 +1,33 @@
+---
+import { SITE } from "@/consts"
+---
+
+<section class="flex h-96 sm:h-72 mt-16">
+  <div class="animate h-full w-full flex items-center justify-center mx-auto">
+    <div class='w-full h-full flex flex-col items-center justify-center'>
+      <div class='p-5 flex flex-col sm:flex-row'>
+        <img class="size-64 mx-auto sm:my-auto flex dark:hidden" src="/saulo-resume-page/astronaut-light.png"></img>
+        <img class="size-52 mx-auto sm:my-auto hidden dark:flex" src="/saulo-resume-page/astronaut-dark.png"></img>
+        <div class='flex flex-col p-5 text-center comfortaa-700 my-auto sm:my-auto'>
+          <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
+            Olá! Me chamo
+          </p>
+          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
+            {SITE.AUTHOR}
+          </p>
+          <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
+            Sou Engenheiro de Software
+          </p>
+          <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
+            <!-- <a href='/blog' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border-2 border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+              Ver Blog
+            </a> -->
+            <a href='#portfolio' class='py-2 px-4 truncate rounded text-xs md:text-sm lg:text-base border-2 border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend'>
+              Ver Portfólio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

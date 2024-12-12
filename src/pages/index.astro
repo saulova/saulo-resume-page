@@ -1,0 +1,78 @@
+---
+import { getCollection } from "astro:content"
+import PageLayout from "@/layouts/PageLayout.astro"
+import ArrowCard from "@/components/ArrowCard.astro"
+import { SITE } from "@/consts"
+import HeroBanner from "@/components/HeroBanner.astro"
+import Contact from "@/components/Contact.astro"
+import Card from "@/components/Card.astro"
+
+// const posts = (await getCollection("blog"))
+//   .filter(post => !post.data.draft)
+//   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+//   .slice(0,3)
+
+const allProjects = await getCollection('portfolio');
+---
+
+<PageLayout title="Home" description={SITE.DESCRIPTION}>
+  <HeroBanner />
+
+  <div class="flex flex-col mx-auto px-5 pb-7">
+    <!-- About Section -->
+    <section class="animate pb-4">
+      <article class="pb-0 text-justify">
+        <p>Sou um engenheiro de software apaixonado por inovação e sempre em busca de aprender algo novo. Durante minha carreira, trabalhei com diversas tecnologias, com um foco recente nos serviços de nuvem da AWS. Tenho experiência na implementação de arquiteturas de microsserviços e automação de fluxos de trabalho, o que resultou em melhorias como otimização da infraestrutura e redução de custos.</p>
+        <p>Adoro explorar maneiras de otimizar processos e apoiar colegas no desenvolvimento de novas habilidades. Tenho facilidade para atuar em equipes ágeis e colaborativas, onde inovação e melhorias contínuas são prioridades.</p>
+        <p>Com formação em Engenharia Elétrica complementada por um MBA em Gestão de Negócios e Inovação, e atualmente cursando outro MBA em Engenharia de Software, trago uma perspectiva interdisciplinar única para o desenvolvimento de software. Isso me permite não apenas criar soluções técnicas eficientes, mas também entender suas implicações para o sucesso nos negócios.</p>
+        <p>Minhas habilidades técnicas incluem Node.js, JavaScript, TypeScript, Python, Golang, React, C#, .NET, Docker, Serverless Framework, Terraform, scripting Bash, DevOps e bancos de dados como PostgreSQL, MySQL, Oracle DB, MS SQL Server e MongoDB. Além disso, sou familiarizado com vários serviços da AWS, como Lambda, API Gateway, SQS, ECS, S3, RDS, X-Ray, CloudWatch e QuickSight.</p>
+      </article>
+    </section>
+    <!-- Portfolio Anchor -->
+    <div id="portfolio" class="block -top-24 relative"></div>
+    <!-- Portfolio Section -->
+    <section class="flex w-full animate pb-9">
+      <div class="flex flex-col gap-y-4 w-full">
+        <div class="flex">
+          <p class="font-semibold text-black dark:text-white">
+            Portfólio
+          </p>
+        </div>
+        <div class="flex">
+          <div class="animate bg-opacity-90 bg-white dark:bg-black dark:bg-opacity-90">
+            <ul class="flex flex-wrap gap-1.5 justify-center">
+              {allProjects.map((project) => <li><Card entry={project} /></li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <!-- <section class="flex w-full animate pb-9">
+      <div class="flex flex-col space-y-4 w-full">
+        <div class="flex justify-between">
+          <p class="font-semibold text-black dark:text-white">
+            Posts Recentes
+          </p>
+          <a href="/saulo-resume-page/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
+            <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
+              Todas os Posts
+            </span>
+          </a>
+        </div>
+        <ul class="space-y-4">
+          {posts.map((post) => (
+            <li>
+              <ArrowCard entry={post} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <Contact />
+
+  </div>
+</PageLayout>

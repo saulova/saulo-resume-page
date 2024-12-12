@@ -1,0 +1,77 @@
+---
+import { SITE, SOCIALS } from "@/consts"
+---
+
+<footer class="flex flex-col w-full animate">
+  <section>
+    <div class="flex items-center justify-center sm:justify-end px-5 pb-5">
+      <button id="back-to-top" aria-label="Back to top of page" class="group flex w-fit p-1.5 gap-1.5 text-sm items-center border-2 rounded hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white rotate-90">
+          <line x1="19" y1="12" x2="5" y2="12" class="scale-x-0 group-hover:scale-x-100 translate-x-3 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
+          <polyline points="12 19 5 12 12 5" class="translate-x-1 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
+        </svg>
+        <div class="w-full group-hover:text-black group-hover:dark:text-white transition-colors duration-300 ease-in-out">
+          Voltar ao topo
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <section class="overflow-hidden whitespace-nowrap border-t border-black/10 dark:border-white/25">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-5">
+      <div class="flex flex-col items-center sm:items-start">
+        <a href="/saulo-resume-page" class="flex gap-1 w-fit font-semibold text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-auto">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+          </svg>
+          {SITE.TITLE}
+        </a>
+      </div>
+        <div class="flex flex-wrap gap-x-4 items-center justify-center sm:justify-end">
+          {
+            SOCIALS.map((SOCIAL) => (
+              <a 
+                href={SOCIAL.HREF} 
+                target="_blank" 
+                aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`} 
+                class="group size-6 rounded-full items-center justify-center hover:bg-black/5 dark:hover:bg-white/20 blend"
+              >
+                <svg class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
+                  <use href={`/saulo-resume-page/social.svg#${SOCIAL.ICON}`} />
+                </svg>
+              </a>
+            ))
+          }
+        </div>
+    </div>
+  </section>
+
+  <section class="overflow-hidden whitespace-nowrap border-t border-black/10 dark:border-white/25">
+    <div class="h-full grid grid-cols-1 gap-3 p-5">
+      <div class="order-2 sm:order-1 flex flex-col items-center justify-center">
+        <div class="text-sm mt-2">
+          &copy; 2024 | All rights reserved
+        </div>
+      </div>
+      
+    </div>
+  </section>
+</footer>
+
+<script is:inline>
+  function goBackToTop(event) {
+    event.preventDefault()
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+  }
+
+  function inintializeBackToTop() {
+    const backToTop = document.getElementById("back-to-top")
+    backToTop?.addEventListener("click", goBackToTop)
+  }
+
+  document.addEventListener("astro:after-swap", inintializeBackToTop)
+  inintializeBackToTop()
+</script>

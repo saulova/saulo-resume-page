@@ -1,0 +1,28 @@
+---
+import { formatDate } from "@/lib/utils";
+import { Image } from "astro:assets";
+
+const { entry } = Astro.props;
+---
+
+<a
+  href={`${entry.data.repository}`}
+  target="_blank"
+  class="flex flex-col w-full md:w-56 items-center border-2 rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
+>
+  <div class="flex w-full h-40 bg-slate-400 rounded-t-lg">
+    <Image
+      src={entry.data.cover}
+      alt={entry.data.title}
+      class="object-cover object-center !m-0 aspect-auto block rounded-t-lg"
+      width={600}
+      height={600}
+    />
+  </div>
+  <div class="p-4 w-full group-hover:text-black group-hover:dark:text-white blend">
+    <div class="font-semibold text-black dark:text-white mb-1">
+      {entry.data.title}
+    </div>
+    <div class="text-sm line-clamp-3">{entry.data.summary}</div>
+  </div>
+</a>

@@ -1,0 +1,10 @@
+---
+import { getCollection } from 'astro:content';
+import ArrowCard from '@/components/ArrowCard.astro';
+ 
+const allPosts = await getCollection('blog');
+---
+ 
+<ul class="flex flex-col gap-3">
+  {allPosts.map((post) => <li><ArrowCard entry={post} /></li>)}
+</ul>
