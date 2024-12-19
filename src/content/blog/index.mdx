@@ -1,0 +1,69 @@
+---
+title: "Microsserviços - Unix Philosophy e Boas Práticas"
+cover: ./cover-microservices-unix-philosophy-and-good-practices.png
+summary: "Ao projetar sistemas baseados em microsserviços, a simplicidade, a modularidade e a colaboração entre serviços são pilares fundamentais. Para isso, podemos nos inspirar na interpretação da Unix Philosophy apresentada por Eric S. Raymond em seu livro The Art of Unix Programming. Essa abordagem atemporal orienta como criar software robusto, sustentável e de alta qualidade."
+date: "Dec 19 2024"
+draft: false
+tags:
+  - Microservices
+---
+
+Ao projetar sistemas baseados em microsserviços, a simplicidade, a modularidade e a colaboração entre serviços são pilares fundamentais. Para isso, podemos nos inspirar na interpretação da Unix Philosophy apresentada por Eric S. Raymond em seu livro The Art of Unix Programming. Essa abordagem atemporal orienta como criar software robusto, sustentável e de alta qualidade.  
+
+**Regras para um Design Eficiente**:
+
+- **Modularidade:** Crie componentes simples conectados por interfaces claras. Microsserviços devem ser pequenos e focados em um único propósito.  
+
+- **Clareza:** Prefira soluções simples e legíveis a soluções excessivamente "inteligentes". Códigos claros são mais fáceis de manter e escalar.  
+
+- **Composição:** Projete microsserviços para serem facilmente integrados uns aos outros.  
+
+- **Separação:** Separe o "o quê" (policy, política) do "como" (engine, mecanismo). Por exemplo, diferencie lógica de negócio da camada de infraestrutura.  
+
+- **Simplicidade:** Simplifique onde for possível, adicionando complexidade apenas quando absolutamente necessário.  
+
+- **Parcimônia:** Escreva um grande programa (ou serviço) apenas quando nenhuma abordagem mais simples resolver o problema.  
+
+- **Transparência:** Permita que os sistemas sejam fáceis de entender, inspecionar e depurar; a visibilidade reduz custos e aumenta a robustez.  
+
+- **Robustez:** Resultado direto da simplicidade e da transparência; sistemas robustos se comportam bem em cenários adversos.  
+
+- **Representação:** Use dados para embutir conhecimento, permitindo que a lógica seja “burra”, mas confiável.  
+
+- **Menor Surpresa:** Em interfaces, sempre opte pelo comportamento mais intuitivo e previsível.  
+
+- **Silêncio:** Programas e serviços devem ser silenciosos a menos que tenham algo relevante a reportar, em produção, lembre-se de gerar logs somente do que realmente importa.  
+
+- **Reparação:** Quando ocorrer um erro, ele deve ser ruidoso e acontecer o mais rápido possível, a visibilidade (transparência) reduz custos de reparo.  
+
+- **Economia:** O tempo dos desenvolvedores é precioso (time is money, friend!). Prefira ferramentas e soluções que otimizem sua produtividade.  
+
+- **Geração:** Sempre que possível, automatize! Escreva programas que gerem outros programas para evitar esforço manual e redundante, padronize.  
+
+- **Otimização:** Resolva o problema antes de tentar otimizá-lo. A otimização prematura é inimiga da simplicidade.  
+
+- **Diversidade:** Não confie em soluções que proclamam ser “a única maneira certa”. Adote flexibilidade ao construir sistemas.  
+
+- **Extensibilidade:** Projete sistemas para serem extendidos no futuro, o futuro chegará mais rapido do que você imagina; requisitos novos surgirão, e sistemas preparados crescerão com eficiência e economia, sem grandes (ou nenhum) breaking change.  
+
+**Complementando**:  
+Esses princípios alinham-se com diversas práticas, como:  
+
+- **KISS:** O princípio KISS destaca a importância da simplicidade no design e na implementação de sistemas. A ideia central é criar soluções que sejam o mais simples possível para resolver um problema sem adicionar complexidade desnecessária.  
+- **DRY:** O princípio DRY sugere que cada pedaço de conhecimento ou lógica em um sistema deve estar definido apenas uma vez. A repetição de código pode levar a inconsistências, maior esforço de manutenção e maior probabilidade de bugs.  
+- **DevOps:** A cultura DevOps se beneficia da modularidade e automação (Economia e Geração), promovendo integração e entrega contínuas.  
+- **SOLID:** Boas práticas de design orientado a objetos que ajudam a criar sistemas modulares e claros.  
+
+**Por que aplicar esses conceitos a microsserviços?**  
+A natureza distribuída dos microsserviços pode gerar complexidade rapidamente. Ao adotar essas regras, conseguimos:  
+
+- Garantir escalabilidade e adaptabilidade.  
+- Facilitar manutenção, debug e monitoramento.  
+- Proporcionar sistemas mais resilientes e preparados para o futuro.  
+
+**Caminho para a Eficiência**  
+Ao aplicarmos essas regras e metodologias, construímos sistemas que não apenas resolvem os problemas de hoje, mas também antecipam os desafios de amanhã.  
+
+**Referencias**:  
+- [The Art of Unix Programming - Eric S. Raymond](https://www.amazon.com.br/Art-Unix-Programming-Eric-Raymond/dp/0131429019)
+- Foto de [Alvaro Reyes](https://unsplash.com/pt-br/@alvarordesign?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) na [Unsplash](https://unsplash.com/pt-br/fotografias/pessoa-que-trabalha-em-papel-azul-e-branco-a-bordo-qWwpHwip31M?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)

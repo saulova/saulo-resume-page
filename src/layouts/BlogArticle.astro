@@ -52,9 +52,6 @@ const next = items[(index + 1) % items.length]
     <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
       {title}
     </h1>
-    <div class="mt-1">
-      {summary}
-    </div>
     <div class="flex mx-auto justify-center mt-10">
       <Image
         src={cover}
@@ -66,7 +63,7 @@ const next = items[(index + 1) % items.length]
     </div>
   </div>
 </div>
-<div class="flex-1">
+<div class="flex-1 pb-5">
   <div>
     <article>
       <Content />
