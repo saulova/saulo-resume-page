@@ -38,7 +38,7 @@ const allProjects = await getCollection('portfolio');
             Portfólio
           </p>
         </div>
-        <div class="flex">
+        <div class="flex justify-center md:justify-start">
           <div class="animate bg-opacity-90 bg-white dark:bg-black dark:bg-opacity-90">
             <ul class="flex flex-wrap gap-1.5 justify-center">
               {allProjects.map((project) => <li><Card entry={project} /></li>)}
