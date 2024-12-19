@@ -12,7 +12,7 @@ type Props = {
 
 const { entry } = Astro.props
 const { collection, data, body } = entry
-const { title, summary, date, cover } = data
+const { title, date, cover } = data
 const { Content } = await entry.render()
 
 const items = (await getCollection(collection))

@@ -3,7 +3,6 @@ import type { CollectionEntry } from "astro:content";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import AllPosts from "@/components/AllPosts.astro";
 
 type Props = {
   tags: string[];
