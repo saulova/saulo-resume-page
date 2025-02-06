@@ -12,8 +12,8 @@ import { mermaid } from "./src/plugins/mermaid";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://saulova.github.io",
-  base: "saulo-resume-page",
+  site: "https://sauloalvarenga.dev.br",
+  base: "",
   integrations: [
     tailwind(),
     sitemap(),

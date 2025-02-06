@@ -15,11 +15,11 @@ export const BLOG: Page = {
 export const LINKS: Links = [
   {
     TEXT: "Home",
-    HREF: "/saulo-resume-page/",
+    HREF: "/",
   },
   {
     TEXT: "Blog",
-    HREF: "/saulo-resume-page/blog",
+    HREF: "/blog",
   },
 ];
 

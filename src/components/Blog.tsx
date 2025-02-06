@@ -67,11 +67,11 @@ export default function Blog({ data, tags, children }: Props) {
                     )}
                   >
                     <use
-                      href={`/saulo-resume-page/ui.svg#square`}
+                      href={`/ui.svg#square`}
                       className={cn(!filter.has(tag) ? "block" : "hidden")}
                     />
                     <use
-                      href={`/saulo-resume-page/ui.svg#square-check`}
+                      href={`/ui.svg#square-check`}
                       className={cn(filter.has(tag) ? "block" : "hidden")}
                     />
                   </svg>

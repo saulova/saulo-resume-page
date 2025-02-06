@@ -11,7 +11,7 @@ import Container from "@/components/Container.astro"
     <Container size="md">
       <div class="flex flex-row w-full h-full justify-between">
         <div class="flex my-auto font-semibold ">
-          <a href="/saulo-resume-page" class="flex flex-row space-x-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+          <a href="" class="flex flex-row space-x-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-auto">
               <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
             </svg>          
@@ -34,27 +34,27 @@ import Container from "@/components/Container.astro"
         </div>
 
         <div class="flex my-auto buttons space-x-1">
-          <a href="/saulo-resume-page/rss.xml" target="_blank" aria-label={`Rss feed for ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-lg p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border-2 border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+          <a href="/rss.xml" target="_blank" aria-label={`Rss feed for ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-lg p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border-2 border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
             <svg class="size-full">
-              <use href="/saulo-resume-page/ui.svg#rss"></use>
+              <use href="/ui.svg#rss"></use>
             </svg>
           </a>
 
           <button id="header-theme-button" aria-label={`Toggle light and dark theme`} class={cn("hidden md:flex", "size-9 rounded-lg p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border-2 border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
             <svg class="size-full block dark:hidden">
-              <use href="/saulo-resume-page/ui.svg#moon"></use>
+              <use href="/ui.svg#moon"></use>
             </svg>
             <svg class="size-full hidden dark:block">
-              <use href="/saulo-resume-page/ui.svg#sun"></use>
+              <use href="/ui.svg#sun"></use>
             </svg>
           </button>
 
           <button id="header-drawer-button" aria-label={`Toggle drawer open and closed`} class={cn("flex md:hidden", "size-9 rounded-lg p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border-2 border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
             <svg id="drawer-open" class="size-full">
-              <use href="/saulo-resume-page/ui.svg#menu"></use>
+              <use href="/ui.svg#menu"></use>
             </svg>
             <svg id="drawer-close" class="size-full">
-              <use href="/saulo-resume-page/ui.svg#x"></use>
+              <use href="/ui.svg#x"></use>
             </svg>
           </button>
         </div>
